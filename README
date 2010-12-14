@@ -1,0 +1,10 @@
+Random files. Some have made my life easier.
+
+For now:
+
+- A makefile for latex and bibtex. Support for svg to pdf and eps
+  which could be included by your latex project. Uses inkscape with no
+  gui to convert.
+
+- A sort of template for a masters thesis. Do not follow it
+  blindly. Some things in it are probably stupid.

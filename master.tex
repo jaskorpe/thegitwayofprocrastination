@@ -1,0 +1,92 @@
+% Disclaimer. Not sure that absolutely everything in this file makes
+% sense. Investigate fruther!
+\documentclass{uiophd}
+\usepackage[T1]{fontenc, url}
+\usepackage{babel, textcomp, uiosloforside}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{cite}
+
+\pagestyle{plain}
+
+\title{My nice title}
+\author{My nice name}
+
+
+\begin{document}
+
+% Only useful for students from University of Oslo Check this page for
+% howto on getting uiosloforside on your computer. Same goes for
+% uiophd documentclass.  http://mindmutation.net/tips.html
+\uiosloforside[kind={Master thesis}]
+\pagenumbering{roman}
+
+% Probably not what we want when using uiophd. Check guidelines for
+% your university.
+\setlength{\oddsidemargin}{35pt}
+\setlength{\evensidemargin}{35pt}
+\setlength{\marginparwidth}{35pt}
+\setlength{\footskip}{30pt}
+
+\makeatletter
+
+% Not sure this does anything useful when using uiophd as
+% documentclass. Must investigate further.
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+  \hbox{}
+  \thispagestyle{plain}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{plain}\cleardoublepage}
+
+\begin{abstract}
+  Placeholder
+\end{abstract}
+
+% I guess chapter is sensible for Acks.
+\chapter*{Acknowledgements}
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+
+% Parts might not make much sense for a masters thesis.
+
+\part{Background and concepts}
+
+\chapter{Introduction}
+\label{chap:introduction}
+\input{introduction.tex}
+
+% Insert more chapter or parts here if needed.
+
+
+\part{Analasys}
+
+\chapter{Results and Evaluation}
+\label{chap:results and evaluation}
+\input{resultsandevaluation.tex}
+
+\chapter{Conclusions and Future Work}
+% Not sure what label should be to make sense.
+\label{chap:future work}
+\input{conclusion.tex}
+
+
+
+\appendix
+%\addcontentsline{toc}{\protect\contentsline{section}{APPENDIX}{}} \section*{Appendix}
+\addcontentsline{toc}{chapter}{APPENDIX}
+\chapter{Appendix}
+placeholder
+\newpage
+\addcontentsline{toc}{chapter}{REFERENCES}
+\bibliographystyle{unsrt}
+\bibliography{references}
+\end{document}

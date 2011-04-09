@@ -1,0 +1,19 @@
+#+TITLE: Cool masters thesis title
+#+AUTHOR: Jon Anders Skorpen
+#+EMAIL: jonas@ifi.uio.no
+#+LaTeX_CLASS: uiophd
+#+COLUMNS: %40ITEM %5TODO %15DEADLINE
+
+* DONE Header1
+  Some text
+
+* TODO Header2
+  CLOCK: [2011-04-09 Sat 16:20]--[2011-04-09 Sat 17:32] =>  1:12
+  DEADLINE: [2011-04-23 Sat]
+  Some unfinished text
+
+** DONE Subheader1
+   Finished text
+
+\bibliographystyle{plain}
+\bibliography{references}
